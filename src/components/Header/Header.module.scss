@@ -1,0 +1,23 @@
+.header{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 60px;
+  background-color: rgb(229,226,215);
+  border-bottom: 2px solid rgb(4,138,205);
+  box-shadow: 0 3px 9px rgb(172, 172, 172);
+
+
+  &__logo-wrapper {
+    width: 58px;
+    height: 58px;
+    background-color: rgb(4,138,205);
+  }
+  &__title {
+    margin-left: 200px;
+    align-self: center;
+    flex-grow: 1;
+  }
+}
