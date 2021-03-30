@@ -1,11 +1,13 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import bemCssModules from "bem-css-modules";
 
 import Modal from "../Modal/Modal";
-
-import { default as LoginFormStyles } from "./LoginForm.module.scss";
 import { StoreContext } from "../../store/StoreProvider";
 import request from "../../helpers/request";
+
+import { default as LoginFormStyles } from "./LoginForm.module.scss";
+
+
 const style = bemCssModules(LoginFormStyles);
 
 const LoginForm = ({ handleOnClose, isModalOpen }) => {
@@ -31,7 +33,7 @@ const LoginForm = ({ handleOnClose, isModalOpen }) => {
   const handleOnSubmit = async (event) => {
     event.preventDefault();
     const { data, status } = await request.post("/users", { login, password });
-    if ((status === 200)) {
+    if (status === 200) {
       setUser(data.user);
       resetStateOfInputs();
       handleOnClose();
@@ -39,6 +41,12 @@ const LoginForm = ({ handleOnClose, isModalOpen }) => {
       setValidateMessage(data.message);
     }
   };
+
+  useEffect(()=>{
+    if(isModalOpen){
+      resetStateOfInputs();
+    }
+  },[isModalOpen])
 
   const validateMessageComponent = validateMessage.length ? (
     <p className={style("validate-message")}>{validateMessage}</p>
@@ -48,7 +56,7 @@ const LoginForm = ({ handleOnClose, isModalOpen }) => {
     <Modal
       handleOnClose={handleOnClose}
       isOpen={isModalOpen}
-      shouldCloseOnOutsideClick={true}
+      shouldBeCloseOnOutsideClick={true}
     >
       {validateMessageComponent}
       <form className={style()} method="post" onSubmit={handleOnSubmit}>
@@ -69,8 +77,10 @@ const LoginForm = ({ handleOnClose, isModalOpen }) => {
           </label>
         </div>
         <div className={style("row")}>
-          <button className='btn' type="submit">zaloguj</button>
-          <button  className='btn' onClick={handleOnCloseModal} type="button">
+          <button className="btn" type="submit">
+            zaloguj
+          </button>
+          <button className="btn" onClick={handleOnCloseModal} type="button">
             anuluj
           </button>
         </div>
