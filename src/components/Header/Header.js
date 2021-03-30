@@ -22,7 +22,7 @@ const Header = () => {
     }
   }
 
-  const setProperlyLabel = Boolean(user) ? "login in" : "logout";
+  const setProperlyLabel = Boolean(user) ? "logout" : "login";
   return (
     <header className={style()}>
       <div className={style("logo-wrapper")} />
