@@ -16,8 +16,10 @@
     background-color: rgb(4,138,205);
   }
   &__title {
+    margin-bottom: 0;
     margin-left: 200px;
     align-self: center;
     flex-grow: 1;
+    font-family: 'Courier New', Courier, monospace;
   }
 }

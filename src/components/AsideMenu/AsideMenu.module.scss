@@ -1,0 +1,21 @@
+.aside-menu{
+  padding: 15px;
+  width: 200px;
+  background-color: antiquewhite;
+  &__title{
+    margin-top: 20px;
+  }
+  &__link{
+    margin-top: 10px;
+    padding: 3px 5px;
+    color: antiquewhite;
+    text-align: center;
+    background-color: burlywood;
+    cursor: pointer;
+
+    &:hover {
+      background-color: crimson;
+    }
+
+  }
+}

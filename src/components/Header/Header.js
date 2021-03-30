@@ -26,8 +26,8 @@ const Header = () => {
   return (
     <header className={style()}>
       <div className={style("logo-wrapper")} />
-      <h1 className={style("title")}>Super kursy dla...</h1>
-      <button onClick={handleOnClick}>{setProperlyLabel}</button>
+      <h2 className={style("title")}>Super kursy dla...</h2>
+      <button onClick={handleOnClick} className="btn_log">{setProperlyLabel}</button>
       <LoginForm handleOnClose={handleOnClose} isModalOpen={isModalOpen}/>
     </header>
   );
