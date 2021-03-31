@@ -21,8 +21,10 @@ const AsideMenu = () => {
 
   return (
     <section className={style()}>
+      <div className={style('nav-wrapper')}>
       <UserMenu isUserLogged={Boolean(user)} />
       {adminMenuComponent}
+      </div>
     </section>
   );
 };

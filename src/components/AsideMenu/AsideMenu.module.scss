@@ -2,6 +2,13 @@
   padding: 15px;
   width: 200px;
   background-color: antiquewhite;
+  position: relative;
+
+  &__nav-wrapper{
+    position: sticky;
+    top: 80px;
+  }
+
   &__title{
     margin-top: 20px;
   }
