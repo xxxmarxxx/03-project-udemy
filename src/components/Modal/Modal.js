@@ -1,4 +1,4 @@
-import React, { Children, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import ReactDom from "react-dom";
 import bemCssModules from "bem-css-modules";
 
