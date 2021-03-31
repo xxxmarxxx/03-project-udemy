@@ -3,7 +3,7 @@ import bemCssModules from "bem-css-modules";
 
 import { default as CoursesStyles } from "./Courses.module.scss";
 
-import Course from './subcomponents/Course';
+import Course from '../Course/Course';
 import { StoreContext } from "../../store/StoreProvider";
 
 const style = bemCssModules(CoursesStyles);
