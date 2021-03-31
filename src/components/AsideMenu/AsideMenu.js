@@ -6,7 +6,7 @@ import AdminMenu from './subcomponents/AdminMenu';
 import UserMenu from "./subcomponents/UserMenu";
 import { StoreContext } from "../../store/StoreProvider";
 
-import { defualt as AsideMenuStyles } from "./AsideMenu.module.scss";
+import { default as AsideMenuStyles } from "./AsideMenu.module.scss";
 
 const style = bemCssModules(AsideMenuStyles);
 
@@ -20,7 +20,7 @@ const AsideMenu = () => {
   : null;
 
   return (
-    <section >
+    <section className={style()}>
       <UserMenu isUserLogged={Boolean(user)} />
       {adminMenuComponent}
     </section>
