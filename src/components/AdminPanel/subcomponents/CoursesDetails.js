@@ -31,8 +31,8 @@ const CourseDetails = (props) => {
   return (
     <details>
       <summary>{title}</summary>
-      <button onClick={showPopup}>Edytuj</button>
-      <button onClick={handleDeleteCourse}>Usun</button>
+      <button onClick={showPopup} className='btn'>Edytuj</button>
+      <button onClick={handleDeleteCourse} className='btn'>Usun</button>
       <CoursePopup isOpenPopup={isOpenPopup} hidePopup={hidePopup} {...props} />
     </details>
   );

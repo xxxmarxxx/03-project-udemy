@@ -23,7 +23,7 @@ const AdminPanel = () => {
   return (
     <section>
       {coursesElements}
-      <button onClick={showPopup}>Dodaj nowy kurs</button>
+      <button onClick={showPopup} className='btn'>Dodaj nowy kurs</button>
       <CoursePopup
         isEditMode={false}
         isOpenPopup={isOpenPopup}

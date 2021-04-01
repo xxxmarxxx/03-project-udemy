@@ -15,7 +15,7 @@ const UserMenu = ({ isUserLogged }) => (
           <Link to="/">Kursy w sprzedazy</Link>
         </li>
         {isUserLogged && (
-          <li className={style('link')}>
+          <li className='btn'>
             <Link to="/my-courses">Moje zakupione kursy</Link>
           </li>
         )}
