@@ -11,15 +11,18 @@
 
   &__title{
     margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
   }
   &__link{
     margin-top: 10px;
     padding: 3px 5px;
-    color: antiquewhite;
-    border-radius: 10px;
+    // color: antiquewhite;
+    border-radius: 5px;
     text-align: center;
     background-color: rgb(143, 186, 220);
     cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
 
     &:hover {
       background-color: crimson;
